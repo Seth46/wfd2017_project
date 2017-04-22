@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block pageTitle %}Home{% endblock %}
+{% block body %}
+    <h1>Welcome to the Recipe Repository</h1>
+
+    <p>
+        Browse our recipes from here or login to access your homepage
+    </p>
+
+    <a href="{{ path('recipe_index') }}">Browse</a>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+    body { background: #F5F2F2; font: 18px/1.5 sans-serif; }
+    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
+    h1 { font-size: 36px;}
+    h2 { font-size: 21px; margin-bottom: 1em; }
+
+
+</style>
+{% endblock %}

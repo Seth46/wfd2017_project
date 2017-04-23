@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Login</h1>
+
+    {% if app.session.flashBag.has('error') %}
+        <div class="flash-error">
+            {% for msg in app.session.flashBag.get('error') %}
+            {{ msg }}
+        </div>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Login" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('user_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
